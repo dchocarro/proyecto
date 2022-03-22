@@ -15,17 +15,6 @@ function Producto(props) {
     let cantidad = 0;
     const Lista = props.lista;
 
-    // const navega = useNavigate();
-
-    // const borrarProducto = () => {
-    //     axios.delete('https://proyecto-webapp-choki-default-rtdb.europe-west1.firebasedatabase.app/productos/' + id + '.json?auth=' + props.idToken)
-    //         .then(response => {
-    //             //console.log(response);
-    //             alert('Producto borrado');
-    //             navega('/home');
-    //             navega('/productos');
-    //         });
-    // }
     const añadirLista = () => {
         
         let arrayProductos = Lista;

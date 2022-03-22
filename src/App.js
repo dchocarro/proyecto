@@ -13,7 +13,7 @@ import DetalleProducto from './components/productos/DetalleProducto';
 import EditarProducto from './components/editarProducto/EditarProducto';
 import Login from './components/login/Login';
 import Registro from './components/login/Registro';
-import Carrito from './components/carrito/carrito';
+import Carrito from './components/carrito/Carrito';
 import { useState } from 'react';
 
 function App() {
@@ -29,8 +29,7 @@ function App() {
     setLogin(valor);
     setLoginData(datos);
   }
-
-
+  console.log(login)
   return (
     <>
       <Header />
