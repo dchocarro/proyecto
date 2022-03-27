@@ -2,10 +2,15 @@
 import {Link} from 'react-router-dom';
 
 
-function Header() {
+function Header(props) {
+    const login = props.login;
+    let onoff = "Login";
+    if(login === true){
+        onoff = "Logout"
+    }
     return (
         <div className='header'>
-            <h2>LIST OR PORDUCTS</h2>
+            <h2>Tienda del profesor Lyte</h2>
             <nav>
                 {/* <a href="/">Inicio</a> | {'   '}
                 <a href="/sobre-nosotros">Quienes somos</a> | {'   '}
@@ -16,8 +21,8 @@ function Header() {
                 <Link to="/productos">Nuestros productos</Link> | {'   '}
                 {/* <Link to="/nuevo-producto">Nuevo producto</Link> | {'   '} */}
                 {/* <Link to="/contacto?p1=23&p2=hola">Contacto</Link> | {'   '} */}
-                <Link to="/login">Login</Link> | {'   '}
-                <Link to="/registro">Resgitro</Link> | {'   '}
+                <Link to="/login">{onoff}</Link> | {'   '}
+                {/* <Link to="/registro">Resgitro</Link> | {'   '} */}
                 <Link to="/carrito">Carrito</Link> | {'   '}
                 <Link to="/pedidos">Pedidos</Link>
 

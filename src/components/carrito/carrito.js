@@ -15,7 +15,12 @@ function Carrito(props) {
 
     const abrirHandler = () => {
         if (props.lista.length > 0) {
-            setMostrar(true);
+            if (props.login === true) {
+                setMostrar(true);
+            }else{
+                alert("Inicia sesión primero.")
+                navega('/login')
+            }
         }
     }
 
