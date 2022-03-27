@@ -14,6 +14,7 @@ import EditarProducto from './components/editarProducto/EditarProducto';
 import Login from './components/login/Login';
 import Registro from './components/login/Registro';
 import Carrito from './components/carrito/carrito';
+import Pedidos from './components/pedidos/Realizarpedidos';
 import { useState } from 'react';
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
         <Route path="/login" element={<Login actualizaLogin={actualizaLogin} />} />
         <Route path="/registro" element={<Registro actualizaLogin={actualizaLogin} />} />
         <Route path="/carrito" element={<Carrito idToken={loginData.idToken} lista={lista}/>} />
+        <Route path="/realizarpedido" element={<Pedidos lista={lista} cambiarLista={cambiarLista}/>} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />
