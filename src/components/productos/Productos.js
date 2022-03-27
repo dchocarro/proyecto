@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import './Producto.css';
 import Producto from './Producto';
 import axios from 'axios';
 
@@ -25,7 +26,6 @@ function Productos(props) {
                 console.log('Se ha producido un error');
             });
     }, [])
-
     return (
         <>
             {productos.map((elemento) => (

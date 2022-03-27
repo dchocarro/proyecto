@@ -2,52 +2,29 @@ import './Producto.css';
 import FechaProducto from './FechaProducto';
 // import { Link, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 // import axios from 'axios';
 
-function Producto(props) {
+function ProductoCarros(props) {
 
     const nombre = props.nombre;
     const precio = props.precio;
     const fecha = props.fecha;
-    const id = props.id;
-    const setLista = props.setLista;
-    let cantidad = 0;
-    const Lista = props.lista;
+    // const id = props.id;
+    // const setLista = props.setLista;
+    let cantidad = props.cantidad;
+    // const Lista = props.lista;
 
-    const añadirLista = () => {
-        
-        let arrayProductos = Lista;
-
-        arrayProductos["id "+id]={precio: precio, cantidad: cantidad+1};
-        cantidad++;
-        setLista(arrayProductos);
-    }
-    
-
-    const borrarLista = () => {
-        let arrayProductos = Lista;
-        if(cantidad>0){
-            
-
-        arrayProductos["id "+id]={precio: precio, cantidad: cantidad-1};
-        cantidad--;
-        
-        }if (cantidad ===0) {
-            delete arrayProductos["id "+id];
-        }
-        setLista(arrayProductos);
-    }
 
     return (
         <div className='producto'>
             <FechaProducto fecha={fecha} />
             <div className='producto__descripcion'>
-                <h2>{nombre} - <Link to={`/productos/${props.id}`}>VER DETALLE</Link> || <Button variant="success" onClick={añadirLista}>+</Button><Button variant="danger" onClick={borrarLista}>-</Button></h2>
-                <div className='producto__precio'>{precio}</div>
+                <h2>{nombre} - <Link to={`/productos/${props.id}`}>VER DETALLE</Link> || Cantidad: {cantidad}</h2>
+                <div className='producto__precio'>Precio unitario: {precio}</div><div className='producto__precio'>Precio total: {precio*cantidad}</div>
             </div>
         </div>
     )
 }
 
-export default Producto;
+export default ProductoCarros;

@@ -18,7 +18,7 @@ function Login(props) {
         axios.post('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA0UFbKwDrhqf_eE4SSdQ3jNvnSG8NYTOs',authData)
         .then(response => {
             alert('Parece que se ha logueado');
-            console.log(response.data);
+            //console.log(response.data);
             props.actualizaLogin(true,response.data);
         }).catch(err => {
             alert('Parece que no se ha logueado');
