@@ -14,7 +14,7 @@ function ProductoCarros(props) {
     // const setLista = props.setLista;
     let cantidad = props.cantidad;
     // const Lista = props.lista;
-
+console.log();
 
     return (
         <div className='producto'>

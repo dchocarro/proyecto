@@ -25,9 +25,12 @@ function Realizarpedidos(props) {
     const submitHandler = (event) => {
         event.preventDefault();
         const lista = props.lista;
+        let cantidadtotal = 0;
+        lista.map((elemento) => cantidadtotal = cantidadtotal + elemento.cantidad * elemento.precio);
         const datos = {
             nombre: nombre,
-            direccion: direccion
+            direccion: direccion,
+            costo: cantidadtotal
         };
         const todo = {
             envio: datos,
