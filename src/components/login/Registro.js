@@ -1,6 +1,6 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 
@@ -17,17 +17,23 @@ function Registro(props) {
             password: password,
             returnSecureToken: true
         };
-        axios.post('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyA0UFbKwDrhqf_eE4SSdQ3jNvnSG8NYTOs',authData)
-        .then(response => {
-            alert('Parece que se ha registrado');
-            props.actualizaLogin(true,response.data);
-            navega("/productos")
-        }).catch(err => {
-            alert('Parece que no se ha registrado');
-            props.actualizaLogin(false,{});
-        });
+        axios.post('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyA0UFbKwDrhqf_eE4SSdQ3jNvnSG8NYTOs', authData)
+            .then(response => {
+                alert('Parece que se ha registrado');
+                props.actualizaLogin(true, response.data);
+                navega("/productos")
+            }).catch(err => {
+                alert('Parece que no se ha registrado');
+                props.actualizaLogin(false, {});
+            });
     }
+    useEffect(() => {
+        if (props.login === true) {
+            props.actualizaLogin(false, {});
+            navega("/productos")
+        }
 
+    }, []) //eslint-disable-line react-hooks/exhaustive-deps
     return (
         <Form autoComplete="off" onSubmit={submitHandler}>
             <Form.Group className="mb-3" controlId="formBasicEmail">

@@ -40,7 +40,7 @@ function Mostrarpedidos(props) {
     const cerrarHandler = () => {
         setMostrar(false);
     }
-    console.log(pedidos)
+    // console.log(pedidos)
     return (
         <>
             <div className=''>

@@ -46,7 +46,7 @@ function App() {
         {/* <Route path="/nuevo-producto" element={<NuevoProducto idToken={loginData.idToken} />} /> */}
         {/* <Route path="/contacto" element={<Contact />} /> */}
         <Route path="/login" element={<Login actualizaLogin={actualizaLogin} login={login} />} />
-        <Route path="/registro" element={<Registro actualizaLogin={actualizaLogin} />} />
+        <Route path="/registro" element={<Registro actualizaLogin={actualizaLogin} login={login}/>} />
         <Route path="/carrito" element={<Carrito idToken={loginData.idToken} lista={lista} login={login}/>} />
         <Route path="/realizarpedido" element={<Realizaredidos lista={lista} cambiarLista={cambiarLista}/>} />
         <Route path="/pedidos" element={<Pedidos lista={lista} cambiarLista={cambiarLista}/>} />

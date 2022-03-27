@@ -5,8 +5,12 @@ import {Link} from 'react-router-dom';
 function Header(props) {
     const login = props.login;
     let onoff = "Login";
+    let ronoff = "Register";
+    let cosita = "|";
     if(login === true){
         onoff = "Logout"
+        ronoff = "";
+        cosita = "";
     }
     return (
         <div className='header'>
@@ -21,8 +25,8 @@ function Header(props) {
                 <Link to="/productos">Nuestros productos</Link> | {'   '}
                 {/* <Link to="/nuevo-producto">Nuevo producto</Link> | {'   '} */}
                 {/* <Link to="/contacto?p1=23&p2=hola">Contacto</Link> | {'   '} */}
-                <Link to="/login">{onoff}</Link> | {'   '}
-                <Link to="/registro">Resgitro</Link> | {'   '}
+                <Link to="/login">{onoff}</Link> {cosita} {'   '}
+                <Link to="/registro">{ronoff}</Link> | {'   '}
                 <Link to="/carrito">Carrito</Link> | {'   '}
                 <Link to="/pedidos">Pedidos</Link>
 
