@@ -1,7 +1,7 @@
 import './Producto.css';
 import FechaProducto from './FechaProducto';
 // import { Link, useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 // import Button from 'react-bootstrap/Button';
 // import axios from 'axios';
 

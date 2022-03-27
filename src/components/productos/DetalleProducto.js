@@ -1,7 +1,8 @@
-import { useParams, Link } from 'react-router-dom';
+// import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 
 function DetalleProducto() {
 
@@ -22,7 +23,7 @@ function DetalleProducto() {
                 //console.log(arrayProducto);
                 setProducto(response.data[parametros.id]);
             });
-    }, []);
+    }, [parametros]);
 
     return (
         <>
