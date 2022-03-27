@@ -1,5 +1,5 @@
 import './Producto.css';
-import FechaProducto from './FechaProducto';
+// import FechaProducto from './FechaProducto';
 // import { Link, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
@@ -10,6 +10,7 @@ function Producto(props) {
     const nombre = props.nombre;
     const precio = props.precio;
     const fecha = props.fecha;
+    const imagen = props.imagen;
     const id = props.id;
     const setLista = props.setLista;
     const Lista = props.lista;
@@ -30,7 +31,7 @@ function Producto(props) {
         const buscar = id;
         // console.log("id " + id);
         if (arrayProductos.length === 0) {
-            arrayProductos.push({ id: id, nombre: nombre, precio: precio, fecha: fecha, cantidad: 1 });
+            arrayProductos.push({ id: id, nombre: nombre, precio: precio, fecha: fecha, imagen: imagen, cantidad: 1 });
             // console.log("nuevo")
         } else {
             let existe = false;
@@ -49,7 +50,7 @@ function Producto(props) {
                 arrayProductos[donde].cantidad = arrayProductos[donde].cantidad + 1;
                 // console.log("cambio cantidad")
             } else {
-                arrayProductos.push({ id: id, nombre: nombre, precio: precio, fecha: fecha, cantidad: 1 });
+                arrayProductos.push({ id: id, nombre: nombre, precio: precio, fecha: fecha, imagen: imagen, cantidad: 1 });
                 // console.log("añadop otro nuevo en el array")
             }
         }
@@ -105,10 +106,11 @@ function Producto(props) {
         // }
         setLista(arrayProductos);
     }
-
+console.log(imagen)
     return (
         <div className='producto'>
-            <FechaProducto fecha={fecha} />
+            {/* <FechaProducto fecha={fecha} /> */}
+            <img width="70rem" height="70rem" src={imagen}></img>
             <div className='producto__descripcion'>
                 <h2>{nombre} - <Link to={`/productos/${props.id}`}>VER DETALLE</Link> || <Button variant="success" onClick={añadirLista}>+</Button><Button variant="danger" onClick={borrarLista}>-</Button></h2>
                 <div className='producto__precio'>{precio}</div>

@@ -17,7 +17,8 @@ function Productos(props) {
                         id: key,
                         nombre: response.data[key].nombre,
                         precio: response.data[key].precio,
-                        fecha: new Date(response.data[key].fecha)
+                        fecha: new Date(response.data[key].fecha),
+                        imagen: response.data[key].imagen
                     });
                 }
                 //console.log(arrayProductos);
@@ -34,6 +35,7 @@ function Productos(props) {
                     id={elemento.id}
                     nombre={elemento.nombre}
                     precio={elemento.precio}
+                    imagen={elemento.imagen}
                     fecha={elemento.fecha}
                     idToken={props.idToken}
                     setLista={props.cambiarLista}

@@ -63,6 +63,7 @@ function Carrito(props) {
                         nombre={elemento.nombre}
                         precio={elemento.precio}
                         fecha={elemento.fecha}
+                        imagen={elemento.imagen}
                         idToken={props.idToken}
                         setLista={props.cambiarLista}
                         lista={props.lista}
@@ -85,6 +86,7 @@ function Carrito(props) {
                             nombre={elemento.nombre}
                             precio={elemento.precio}
                             fecha={elemento.fecha}
+                            imagen={elemento.imagen}
                             idToken={props.idToken}
                             setLista={props.cambiarLista}
                             lista={props.lista}

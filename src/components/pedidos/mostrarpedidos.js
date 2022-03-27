@@ -40,7 +40,7 @@ function Mostrarpedidos(props) {
     const cerrarHandler = () => {
         setMostrar(false);
     }
-
+    console.log(pedidos)
     return (
         <>
             <div className=''>
@@ -58,6 +58,7 @@ function Mostrarpedidos(props) {
                                 nombre={elemento.nombre}
                                 precio={elemento.precio}
                                 fecha={elemento.fecha}
+                                imagen={elemento.imagen}
                                 cantidad={elemento.cantidad}
                             />
                         ))}
