@@ -19,7 +19,7 @@ console.log();
 
     return (
         <div className='producto'>
-            <img width="70rem" height="70rem" src={imagen}></img>
+            <img width="70rem" height="70rem" src={imagen} alt="imagen"></img>
             <div className='producto__descripcion'>
                 <h2>{nombre} </h2><h2>Cantidad: {cantidad}</h2>
                 <div className='producto__precio'>Precio: {precio*cantidad}</div>

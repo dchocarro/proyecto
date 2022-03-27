@@ -19,7 +19,7 @@ function ProductoCarros(props) {
 
     return (
         <div className='producto'>
-            <img width="70rem" height="70rem" src={imagen}></img>
+            <img width="70rem" height="70rem" src={imagen} alt="imagen"></img>
             {/* <FechaProducto fecha={fecha} /> */}
             <div className='producto__descripcion'>
                 <h2>{nombre}  || Cantidad: {cantidad}</h2>

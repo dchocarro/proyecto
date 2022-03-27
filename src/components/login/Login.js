@@ -10,6 +10,9 @@ function Login(props) {
     const [password, setPassword] = useState('');
     const navega = useNavigate();
 
+    const actualizaLogin = props.actualizaLogin;
+    const login = props.login;
+
     const submitHandler = (event) => {
         event.preventDefault();
         const authData = {
@@ -29,14 +32,15 @@ function Login(props) {
             });
     }
     useEffect(() => {
-        if (props.login === true) {
-            props.actualizaLogin(false, {});
+        if (login === true) {
+            actualizaLogin(false, {});
             navega("/productos")
         }
-    }, [])
+
+    }, []) //eslint-disable-line react-hooks/exhaustive-deps
 
     return (
-        <Form autocomplete="off" onSubmit={submitHandler}>
+        <Form autoComplete="off" onSubmit={submitHandler}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" value={email} onChange={(event) => setEmail(event.target.value)} />

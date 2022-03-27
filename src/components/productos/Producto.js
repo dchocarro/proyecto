@@ -106,11 +106,10 @@ function Producto(props) {
         // }
         setLista(arrayProductos);
     }
-console.log(imagen)
     return (
         <div className='producto'>
             {/* <FechaProducto fecha={fecha} /> */}
-            <img width="70rem" height="70rem" src={imagen}></img>
+            <img width="70rem" height="70rem" src={imagen} alt="imagen"></img>
             <div className='producto__descripcion'>
                 <h2>{nombre} - <Link to={`/productos/${props.id}`}>VER DETALLE</Link> || <Button variant="success" onClick={añadirLista}>+</Button><Button variant="danger" onClick={borrarLista}>-</Button></h2>
                 <div className='producto__precio'>{precio}</div>

@@ -22,7 +22,7 @@ function Header(props) {
                 {/* <Link to="/nuevo-producto">Nuevo producto</Link> | {'   '} */}
                 {/* <Link to="/contacto?p1=23&p2=hola">Contacto</Link> | {'   '} */}
                 <Link to="/login">{onoff}</Link> | {'   '}
-                {/* <Link to="/registro">Resgitro</Link> | {'   '} */}
+                <Link to="/registro">Resgitro</Link> | {'   '}
                 <Link to="/carrito">Carrito</Link> | {'   '}
                 <Link to="/pedidos">Pedidos</Link>
 
