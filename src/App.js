@@ -29,7 +29,9 @@ function App() {
     setLogin(valor);
     setLoginData(datos);
   }
-  console.log(login);
+  if("a"=="b"){
+    console.log(login);
+  }
   return (
     <>
       <Header />

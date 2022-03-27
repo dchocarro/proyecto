@@ -28,7 +28,7 @@ function Producto(props) {
     const añadirLista = () => {
         let arrayProductos = Lista;
         const buscar = id;
-        console.log("id " + id);
+        // console.log("id " + id);
         if (arrayProductos.length === 0) {
             arrayProductos.push({ id: id, nombre: nombre, precio: precio, fecha: fecha, cantidad: 1 });
             // console.log("nuevo")
@@ -58,7 +58,7 @@ function Producto(props) {
         //arrayProductos.push({ id: id, nombre: nombre, precio: precio, fecha: fecha, cantidad: cantidad });
         // cantidad++;
         setLista(arrayProductos);
-        console.log(props.lista);
+        // console.log(props.lista);
     }
 
 

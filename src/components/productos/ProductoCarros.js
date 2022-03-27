@@ -20,7 +20,7 @@ function ProductoCarros(props) {
         <div className='producto'>
             <FechaProducto fecha={fecha} />
             <div className='producto__descripcion'>
-                <h2>{nombre} - <Link to={`/productos/${props.id}`}>VER DETALLE</Link> || Cantidad: {cantidad}</h2>
+                <h2>{nombre}  || Cantidad: {cantidad}</h2>
                 <div className='producto__precio'>Precio unitario: {precio}</div><div className='producto__precio'>Precio total: {precio*cantidad}</div>
             </div>
         </div>

@@ -32,7 +32,7 @@ function DetalleProducto() {
             <p>Precio: {producto.precio}</p>
             <p>Fecha: {producto.fecha}</p>
             <p>Descrición: {producto.descripcion}</p>
-            <Button variant="success"><Link to={`/productos/editar/${parametros.id}`}>EDITAR PRODUCTO</Link></Button>
+            {/* <Button variant="success"><Link to={`/productos/editar/${parametros.id}`}>EDITAR PRODUCTO</Link></Button> */}
         </>
     )
 }
